@@ -1,0 +1,314 @@
+.homePageChild {
+  position: relative;
+  top: 14px;
+  left: 10px;
+  width: 1200px;
+  height: 700px;
+  object-fit: cover;
+}
+.virtualLawyer,
+.virtualLawyerWrapper {
+  position: absolute;
+  left: 0;
+  width: 152px;
+  height: 25px;
+}
+.virtualLawyer {
+  top: 0;
+  display: inline-block;
+}
+.virtualLawyerWrapper {
+  top: 1px;
+}
+.aiTechnologySparkLightbulbIcon {
+  position: absolute;
+  top: 0;
+  left: 154px;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+}
+.frame,
+.frameParent {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 168px;
+  height: 26px;
+}
+.frame {
+  top: 14px;
+  left: 26px;
+  height: 37px;
+  overflow: hidden;
+  font-size: var(--font-size-xl);
+}
+.contactUs,
+.discord,
+.faq,
+.guideline,
+.twitter {
+  width: 62px;
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  flex-shrink: 0;
+}
+.contactUs,
+.discord,
+.faq,
+.twitter {
+  width: 30px;
+}
+.contactUs,
+.discord,
+.twitter {
+  width: 71px;
+}
+.discord,
+.twitter {
+  width: 52px;
+}
+.twitter {
+  width: 46px;
+}
+.guidelineParent {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.virtualLawyer1,
+.virtualLawyer2,
+.virtualLawyer3,
+.virtualLawyer4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 972px;
+  height: 123px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.79);
+}
+.virtualLawyer2,
+.virtualLawyer3,
+.virtualLawyer4 {
+  top: 110px;
+  left: 2px;
+  color: #6a676b;
+  width: 967px;
+  height: 121px;
+}
+.virtualLawyer3,
+.virtualLawyer4 {
+  top: 221px;
+  left: 0;
+  color: #423f42;
+  width: 969px;
+  height: 113px;
+}
+.virtualLawyer4 {
+  top: 331px;
+  left: 4px;
+  color: #2c2b2d;
+  height: 138px;
+}
+.virtualLawyerParent {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 973px;
+  height: 469px;
+}
+.frame2,
+.homePageItem {
+  position: absolute;
+  top: 14px;
+}
+/* .frame2 {
+  left: 12px;
+  width: 973px;
+  height: 569px;
+  overflow: hidden;
+  font-size: var(--font-size-101xl);
+  font-family: var(--font-keania-one);
+} */
+.frame2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-size: var(--font-size-101xl);
+  font-family: var(--font-keania-one);
+}
+
+/* .homePageItem {
+  left: 267px;
+  width: 718px;
+  height: 563px;
+} */
+.homePageItem {
+  position: absolute;
+  right: 0; /* Position it to the extreme right */
+  top: 0;  /* Adjust vertically if necessary */
+  width: auto; /* Auto-adjust based on available space */
+  height: 100%; /* Full height of the container */
+  max-width: 100%; /* Ensure it doesn’t exceed the available space */
+}
+
+.frame3,
+.frameChild {
+  position: absolute;
+  width: 563px;
+}
+.frameChild {
+  bottom:0;
+  left: 0;
+  height: 443px;
+  object-fit: cover;
+}
+.frame3 {
+  bottom: 0;
+  left: 23px;
+  height: 569px;
+  overflow: hidden;
+}
+.theVirtualLawyer {
+  margin: 0;
+}
+.theVirtualLawyerContainer {
+  position: absolute;
+  top: 83px;
+  left: 0;
+  font-weight: 600;
+  display: inline-block;
+  width: 435px;
+  height: 119px;
+}
+.image13Icon,
+.image14Icon {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  width: 41px;
+  height: 46px;
+  object-fit: cover;
+}
+.image14Icon {
+  top: 0;
+  left: 73px;
+  width: 67px;
+  height: 68px;
+}
+.frameItem,
+.image13Parent {
+  position: absolute;
+  top: 0;
+  left: 246px;
+  width: 140px;
+  height: 68px;
+}
+.frameItem {
+  top: 7px;
+  left: 151px;
+  width: 46px;
+  height: 50px;
+  object-fit: cover;
+}
+.theVirtualLawyerProjectDParent {
+  position: absolute;
+  top: 190px;
+  left: 0;
+  width: 435px;
+  height: 202px;
+}
+.frame4,
+.getStarted {
+  position: absolute;
+  top: 14px;
+}
+.frame4 {
+  /* left: 527px; */
+  right: 30px;
+  width: 435px;
+  height: 392px;
+  overflow: hidden;
+  text-align: right;
+  color: var(--color-white);
+}
+.frame4:hover {
+  /* left: 527px; */
+  right: 30px;
+  width: 435px;
+  height: 392px;
+  overflow: hidden;
+  text-align: right;
+  color: var(--color-white);
+  transform: scale(1.05);
+  transition: 0.3s;
+
+}
+.getStarted {
+  left: 19px;
+  font-weight: 600;
+  display: inline-block;
+  width: 97px;
+  height: 23px;
+}
+
+.getStarted:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+.frame5,
+.getStartedWrapper {
+  position: absolute;
+  width: 135px;
+}
+.getStartedWrapper {
+  top: 456px;
+  left: 0;
+  border-radius: 40px;
+  background-color: var(--color-silver);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 52px;
+}
+.getStartedWrapper:hover {
+  top: 456px;
+  left: 0;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.22), 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  background-color: var(--color-silver);
+  border: 1px solid var(--color-black);
+  box-sizing: border-box;
+  height: 52px;
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+.frame5 {
+  top: 14px;
+  /* left: 705px; */
+  right: 140px;
+  height: 508px;
+  overflow: hidden;
+  color: #161519;
+}
+.homePage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: var(--br-17xl);
+  background-color: var(--color-black);
+  height: 100vh;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-silver);
+  font-family: var(--font-montserrat);
+}

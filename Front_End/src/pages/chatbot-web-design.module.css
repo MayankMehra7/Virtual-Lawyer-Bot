@@ -1,0 +1,259 @@
+.chatbotWebDesignChild {
+  position: absolute;
+  top: 14px;
+  left: 11px;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+.virtualLawyer {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: inline-block;
+  width: 152px;
+  height: 25px;
+}
+.aiTechnologySparkLightbulbIcon {
+  position: absolute;
+  top: 0;
+  left: 152px;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+}
+.virtualLawyerParent {
+  position: absolute;
+  top: 23px;
+  left: 26px;
+  width: 166px;
+  height: 28px;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+}
+.frameChild {
+  position: absolute;
+  top: 53px;
+  left: 215px;
+  border-radius: 4px;
+  background-color: var(--color-slategray);
+  width: 9px;
+  height: 492px;
+}
+.yourHistory {
+  position: absolute;
+  top: 9px;
+  left: 56px;
+  display: inline-block;
+  width: 81px;
+  height: 11px;
+}
+.rectangleParent {
+  position: absolute;
+  top: 77px;
+  left: 22px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.58);
+  border-radius: 24px;
+  background-color: rgba(0, 0, 0, 0.74);
+  width: 248px;
+  height: 84%;
+}
+.contactUs,
+.discord,
+.faq,
+.guideline,
+.twitter {
+  width: 62px;
+  position: relative;
+  display: inline-block;
+  height: 14px;
+  flex-shrink: 0;
+}
+.contactUs,
+.discord,
+.faq,
+.twitter {
+  width: 30px;
+}
+.contactUs,
+.discord,
+.twitter {
+  width: 71px;
+}
+.discord,
+.twitter {
+  width: 52px;
+}
+.twitter {
+  width: 46px;
+}
+.guidelineParent {
+  position: absolute;
+  top: 16px;
+  left: 344px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.askMeAnything {
+  position: absolute;
+  top: 19px;
+  left: 18px;
+  display: inline-block;
+  width: 118px;
+  height: 14px;
+}
+.askMeAnythingInput{
+  height: 50px;
+  width: 99.45%;
+  border-radius: 20px;
+  background-color: #777288;
+  border: none;
+  color: white;
+}
+.imgicons81,
+.returnIcon {
+  position: absolute;
+  top: 15px;
+  width: 26px;
+  height: 26px;
+}
+.imgicons81 {
+  left: 890px;
+  object-fit: cover;
+}
+.returnIcon {
+  left: 931px;
+}
+.askMeAnythingParent {
+  margin-top: 120px;
+  position: absolute;
+  top: 507px;
+  left: 286px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.69);
+  border-radius: 20px;
+  background-color: var(--color-slategray);
+  width: 981px;
+  height: 55px;
+  color: rgba(0, 0, 0, 0.63);
+}
+.chatbotWebDesignItem,
+.frameItem {
+  position: absolute;
+  top: 27px;
+  left: 909px;
+  width: 41px;
+  height: 41px;
+}
+.frameItem {
+  margin-top: -5px;
+  left: 2px;
+  border-radius: var(--br-60xl);
+  background-color: #444050;
+  width: 9px;
+  height: 57px;
+}
+.hello,
+.imgicons82 {
+  position: absolute;
+  width: 38px;
+}
+.imgicons82 {
+  margin-top: 33px;
+  left: 14px;
+  height: 35px;
+  object-fit: cover;
+}
+.hello {
+  margin-top: 27px;
+  left: 57px;
+  display: inline-block;
+  height: 14px;
+  width: 600px;
+}
+.rectangleGroup {
+  position: absolute;
+  top: 148px;
+  left: 278px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.44);
+  border-radius: var(--br-6xs);
+  background-color: var(--color-slategray);
+  width: 70%;
+  height: 40%;
+  color: var(--color-gainsboro);
+  overflow: auto;
+}
+
+.rectangleGroup::-webkit-scrollbar {
+display: none;
+}
+.rectangleGroup2 {
+  position: absolute;
+  top: 220px;
+  left: 278px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.44);
+  border-radius: var(--br-6xs);
+  background-color: var(--color-slategray);
+  width: 70%;
+  height: 61px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.frameInner {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: var(--br-60xl);
+  background-color: #555162;
+  width: 9px;
+  height: 57px;
+}
+.userPrompt {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 18px;
+  display: inline-block;
+  width: 85px;
+  height: 14px;
+}
+.chatbotWebDesignInner,
+.rectangleContainer {
+  position: absolute;
+  left: 278px;
+  width: 70%;
+  height: 61px;
+}
+.rectangleContainer {
+  top: 77px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.44);
+  border-radius: var(--br-6xs);
+  background-color: #837c84;
+  color: var(--color-gainsboro);
+}
+.chatbotWebDesignInner {
+  top: 219px;
+}
+.chatbotWebDesign {
+  width: 100%;
+  position: relative;
+  border-radius: var(--br-17xl);
+  background-color: var(--color-black);
+  height: 100vh;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
+  font-family: var(--font-montserrat);
+}
+
+.query1{
+  margin-top: 75px;
+}
+
+.query2{
+  margin-left: 18px;
+  margin-top: 25px;
+}
