@@ -1,0 +1,151 @@
+/* Sidebar Styling */
+.sidebar {
+  width: 280px;
+  height: 100vh;
+  background-color: var(--ms-bg-dark);
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  box-shadow: 3px 0 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Sidebar Top Section */
+.sidebar-top {
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  margin-right: 14px;
+  object-fit: cover;
+  border: 2px solid #505050;
+}
+
+.sidebar-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+
+/* Chat History Section */
+.menu-section {
+  margin-bottom: 25px;
+}
+
+.menu-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #aaaaaa;
+  margin: 0 0 12px 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Menu Items */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.menu-item:hover {
+  background-color: #2a2a2a;
+  transform: translateX(5px);
+}
+
+.menu-item.active {
+  background-color: #505050;
+  border-left: 4px solid #707070;
+}
+
+.menu-item img {
+  width: 22px;
+  height: 22px;
+  margin-right: 12px;
+  opacity: 0.9;
+}
+
+.menu-item span {
+  font-size: 15px;
+  font-weight: 400;
+  color: #f0f0f0;
+  letter-spacing: 0.3px;
+}
+
+/* CTA Button */
+.cta-button {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 25px;
+}
+
+.cta-button button {
+  background: var(--ms-primary);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+  background: var(--ms-link-hover);
+}
+
+.cta-button button span {
+  margin-left: 6px;
+}
+
+.cta-logo {
+  width: 20px;
+  height: 20px;
+}
+.navigation-section {
+  margin-top: auto;
+}

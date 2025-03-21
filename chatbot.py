@@ -9,15 +9,18 @@ warnings.filterwarnings("ignore", category=FutureWarning, module='huggingface_hu
 genai.configure(api_key='AIzaSyCAJWgPhXDT2FjTR9rB4dpLhHoZ9_F7goI')
 
 def generate_with_retrieval(prompt, vectordb):
+    prompt += " (Answer should be based only on Indian laws and regulations.)"  # Force India-specific responses
     top_docs = vectordb.search(prompt, search_type='similarity', k=3)
     
     retrieved_context = " ".join([doc.page_content for doc in top_docs])
     combined_prompt = prompt + "\n" + retrieved_context
 
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-2.0-flash-thinking-exp-1219')
     response = model.generate_content(combined_prompt)
     
     return response.text.strip()
+
+
 
 negative_responses = ("no", "nope", "nah", "not a chance", "sorry")
 exit_commands = ("quit", "pause", "exit", "goodbye", "bye", "later")

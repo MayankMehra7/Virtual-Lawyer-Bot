@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   Routes,
   Route,
   useNavigationType,
   useLocation,
 } from "react-router-dom";
+
 import HomePage from "./pages/home-page";
 import ChatbotWebDesign from "./pages/chatbot-web-design";
 
@@ -12,6 +13,21 @@ function App() {
   const action = useNavigationType();
   const location = useLocation();
   const pathname = location.pathname;
+
+  // Define the default chat object
+  const defaultChat = {
+    id: "default",
+    name: "Chat 1",
+    messages: [
+      {
+        type: "bot",
+        content: "Welcome to Virtual Lawyer Chatbot! How can I assist you today?",
+      },
+    ],
+  };
+
+  // State to manage chats
+  const [chats, setChats] = useState([defaultChat]);
 
   useEffect(() => {
     if (action !== "POP") {
@@ -23,20 +39,18 @@ function App() {
     let title = "";
     let metaDescription = "";
 
-    // Fixed: Removed the duplicate case
     switch (pathname) {
       case "/":
-        title = "Home Page"; // You can add a relevant title for this case
-        metaDescription = "Welcome to the Home Page"; // You can customize the description
+        title = "Home Page";
+        metaDescription = "Welcome to the Home Page";
         break;
       case "/chatbot":
-        title = "Chatbot Web Design"; // You can add a relevant title for this case
-        metaDescription = "Explore our Chatbot Web Design"; // You can customize the description
+        title = "Chatbot Web Design";
+        metaDescription = "Explore our Chatbot Web Design";
         break;
-      // Add other cases as needed
       default:
-        title = "Default Title"; // Optional default title
-        metaDescription = "Default description"; // Optional default description
+        title = "Default Title";
+        metaDescription = "Default description";
         break;
     }
 
@@ -56,10 +70,13 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/chatbot" element={<ChatbotWebDesign />} />
+      <Route path="/" element={<HomePage chats={chats} />} />
+      <Route path="/chatbot" element={<ChatbotWebDesign chats={chats} />} />
+
     </Routes>
+
   );
+  
 }
 
 export default App;

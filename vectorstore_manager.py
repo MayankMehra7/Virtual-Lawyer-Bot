@@ -7,18 +7,25 @@ import json
 import warnings
 from langchain.schema import Document  # Import Document from langchain.schema
 
+# File and directory paths
 json_file_path = r"secs.json"
 vector_db_dir = r"vector_store"
 vector_db_path = os.path.join(vector_db_dir, "vector_store.db")
 
+# Ensure the vector store directory exists
 os.makedirs(vector_db_dir, exist_ok=True)
 
+# Suppress deprecation and future warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning, module='langchain_community')
 warnings.filterwarnings("ignore", category=FutureWarning, module='huggingface_hub')
 
 def process_json_file(json_file_path):
-    with open(json_file_path, "r", encoding='utf-8') as f:  # Added encoding
-        data = json.load(f)
+    """ Reads a JSON file and processes it into a list of LangChain Document objects. """
+    try:
+        with open(json_file_path, "r", encoding='utf-8') as f:  # Added encoding
+            data = json.load(f)
+    except Exception as e:
+        raise ValueError(f"Error reading JSON file: {str(e)}")
 
     documents = []
     for i, doc in enumerate(data):
@@ -32,24 +39,26 @@ def process_json_file(json_file_path):
             print(f"Skipping item {i} due to unexpected format: {doc}")
             continue
 
-        content = f"{title}\n{description}" if title and description else title  # Fixed newline character
-        document_obj = Document(page_content=content, metadata={"id": title})
-        documents.append(document_obj)
+        content = f"{title}\n{description}".strip()  # Ensures clean formatting
+        if content:  # Ensure only non-empty documents are added
+            document_obj = Document(page_content=content, metadata={"id": title})
+            documents.append(document_obj)
+
+    if not documents:
+        raise ValueError("No valid documents found in the JSON file.")
 
     return documents
 
 def get_or_create_vectorstore(json_file_path, vector_db_path):
+    """ Loads or creates a vector store from processed documents. """
     documents = process_json_file(json_file_path)
-    
-    if not documents:  # Check if documents list is empty
-        raise ValueError("No documents were processed from the JSON file")
-    
+
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=20)
     all_splits = text_splitter.split_documents(documents)
-    
+
     model_name = "sentence-transformers/all-mpnet-base-v2"
     embeddings = HuggingFaceEmbeddings(model_name=model_name)
-    
+
     try:
         if os.path.exists(vector_db_path):
             vectordb = Chroma(persist_directory=vector_db_path, embedding_function=embeddings)
@@ -60,10 +69,9 @@ def get_or_create_vectorstore(json_file_path, vector_db_path):
             print(f"Created new vector store at {vector_db_path}.")
         
         return vectordb
-    
+
     except Exception as e:
-        print(f"Error creating/loading vector store: {str(e)}")
-        raise
+        raise RuntimeError(f"Error creating/loading vector store: {str(e)}")
 
 if __name__ == "__main__":
     try:
