@@ -14,15 +14,15 @@
   left: 0;
   display: inline-block;
   width: 152px;
-  height: 25px;
+  height: 125px;
 }
 
 .aiTechnologySparkLightbulbIcon {
   position: absolute;
   top: 0;
-  left: 152px;
-  width: 14px;
-  height: 14px;
+  left: 200px;
+  width: 24px;
+  height: 24px;
 }
 
 .virtualLawyerParent {
@@ -116,9 +116,9 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.44);
   border-radius: var(--br-6xs);
   background-color: var(--color-slategray);
-  width: 70%;
+  width: 80%;
   height: 40%;
-  color: var(--color-gainsboro);
+  color: #000;
   overflow-y: auto;
   padding: 10px;
 }
