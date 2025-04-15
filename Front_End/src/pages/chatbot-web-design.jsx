@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./chatbot-web-design.module.css";
 import img from "../images/Frame-21.png";
-import Sidebar from "./sliderbar";
+
 
 // Voice input handler
 const handleVoiceInput = () => {

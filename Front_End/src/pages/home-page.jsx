@@ -50,7 +50,7 @@ const HomePage = () => {
             </p>
             <p className={styles.theVirtualLawyer}>
               {" "}
-              It features a React/Angular web interface, ensuring intuitive use
+              It features a React web interface, ensuring intuitive use
               and legal compliance, refined through rigorous testing.
             </p>
           </div>
